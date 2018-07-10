@@ -1,0 +1,117 @@
+*{
+	box-sizing: border-box;/*сохраняет заданую ширину блока!!!*/
+}
+body{
+	background-image: url(img/patt.png); /*ставим картинку на фон*/
+}
+.container{/**/
+	width: 1170px;
+	margin: 0 auto;
+}
+.row:after{ /* то нужно писать если в диве используется флоат: лефт Чтоб див понимал свои размеры И следующий елемент не налазил на него*/
+	content: "";
+	clear: both;
+	display: block;
+}
+[class*="col-"]{
+	float: left;
+}
+.col-md-3{
+	width: 25%;
+}
+.col-md-6{
+	width: 50%;
+
+}
+.header{
+	padding: 25px 0;/*Делаем отступ сверху и снизу на 25 пи в шапке*/
+	background-color: rgba(255,255,255,0.75);
+	height:100px;
+}
+.menu li{
+	float: left;
+	width: 25%; /*ширина ли во второй части шапки поцентру их 4 шт*/
+	border-left: 1px solid #2c71b8;/*палочки возле текста*/
+}
+.menu li a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;/*выровнять текст в шапке*/
+	text-decoration: none;/*Убирает нижнее подчеркивание*/
+	font:21px Roboto;
+	color: #3072B6;
+	margin: 0;
+	padding: 10px;
+
+}
+.menu li a:hover{/*при наведении на меню следующие свойства:*/
+	color: white;
+	background:#2c71b8; 
+}
+.menu li:last-child {
+	border-right: 1px solid #2c71b8;/*палочки возле текста*/
+}
+.podmenu{
+	display:none;
+	position: relative;
+	
+}
+.podmenu li{
+	float: none;
+	width: 292px;
+
+}
+
+.podmenu li a{
+	background:#3072B6;
+	color: #E3ECF5;
+	height: 40px;
+	text-align: left;
+	padding-left:15px; 
+
+}
+.podmenu li a:hover{
+	background:#FFFFFF;
+	color: #3877B8;
+	margin: 0;
+
+}
+
+li:hover ul{
+	display:block;
+} 
+
+.col-md-3r input{
+	border: 2px solid #3072B6;
+	width: 200px;
+	height: 40px;
+	margin-left:30px;
+	margin-top: 5px;
+	padding:5px 0px 5px 10px;
+	font:21px Roboto;
+	color: #3072B6; 
+	background-color: rgba(255,255,255,0.0);
+}
+
+.col-md-9 img{ 
+    background:#3072B6;
+	background-repeat: no-repeat;
+	position:relative;
+	top: 10px;
+	right:38px;
+	padding:9px;   
+} 
+.col-md-12 img{
+	/*border: 2px solid #3072B6;*/
+	background: white;
+	position:relative;
+	top: -33px;
+	right:-5px;
+	padding: 10px;
+	margin: 5px 10px 20px 10px;
+
+}
+.row{
+	
+}
